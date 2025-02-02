@@ -24,12 +24,13 @@ app.use(cookieParser());
 app.use(cors(corsOption));
 
 app.post('/', (req, res) => {
-    res.cookie("token", "my name is this",
+    res.cookie("__Host-token", "my name is this",
         {
             httpOnly : true,
             secure:true,
             sameSite:"none",
-            partitioned:true
+            partitioned:true,
+            path:'/'
         }
     ).json({
         message:'successfully',
