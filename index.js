@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
 })
 
 const corsOption = {
-    origin: 'https://origin-frontend.onrender.com',
+    origin: 'https://origin-frontend-two.vercel.app',
     credientals:true
 }
 
