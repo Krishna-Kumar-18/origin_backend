@@ -2,6 +2,7 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import { METHODS } from "http";
 
 dotenv.config({});
 
@@ -11,13 +12,18 @@ const SECRET_KEY = "EIEIEIEIEIEI";
 
 const corsOption = {
     origin: 'https://origin-frontend-two.vercel.app',
-    credientals:true
+    credientals:true,
+    methods:["POST", "GET", "PUT", "DELETE"],
+    allowedHeaders: ['Content-Type', 'Authorization']
+
 }
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 app.use(cors(corsOption));
+
+
 
 
 app.get('/this', (req, res) => {
