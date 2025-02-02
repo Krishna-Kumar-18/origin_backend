@@ -12,7 +12,7 @@ const SECRET_KEY = "EIEIEIEIEIEI";
 
 const corsOption = {
     origin: 'https://origin-frontend-two.vercel.app',
-    credientals:true,
+    credentials:true,
     methods:["POST", "GET", "PUT", "DELETE"],
     allowedHeaders: ['Content-Type', 'Authorization']
 
