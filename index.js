@@ -23,18 +23,11 @@ app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 app.use(cors(corsOption));
 
-
-
-
-app.get('/this', (req, res) => {
-    res.send("my origin project");
-})
-
 app.post('/', (req, res) => {
-    res.cookie("token", "my name is this");
+    res.cookie("token", "my name is this").json({
+        message:'successfully',
+    });
 })
-
-
 
 const PORT = process.env.PORT || 3000;
 
