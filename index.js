@@ -24,7 +24,13 @@ app.use(cookieParser());
 app.use(cors(corsOption));
 
 app.post('/', (req, res) => {
-    res.cookie("token", "my name is this").json({
+    res.cookie("token", "my name is this",
+        {
+            httpOnly : true,
+            secure:true,
+            sameSite:"none"
+        }
+    ).json({
         message:'successfully',
     });
 })
