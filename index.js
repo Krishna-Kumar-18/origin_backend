@@ -27,7 +27,7 @@ app.post('/', (req, res) => {
     res.cookie("__Host-token", "my name is this",
         {
             secure:true,
-            sameSite:"",
+            sameSite:"strict",
             partitioned:true,
             path:'/'
         }
