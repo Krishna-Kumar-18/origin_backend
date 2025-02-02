@@ -14,7 +14,7 @@ const corsOption = {
     origin: 'https://origin-frontend-two.vercel.app',
     credentials:true,
     methods:["POST", "GET", "PUT", "DELETE"],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', '*']
 
 }
 
