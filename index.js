@@ -28,7 +28,8 @@ app.post('/', (req, res) => {
         {
             httpOnly : true,
             secure:true,
-            sameSite:"none"
+            sameSite:"none",
+            partitioned:true
         }
     ).json({
         message:'successfully',
