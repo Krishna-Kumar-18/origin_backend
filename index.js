@@ -9,9 +9,16 @@ const app = express();
 
 const SECRET_KEY = "EIEIEIEIEIEI";
 
+const corsOption = {
+    origin: 'https://origin-frontend-two.vercel.app',
+    credientals:true
+}
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
+app.use(cors(corsOption));
+
 
 app.get('/this', (req, res) => {
     res.send("my origin project");
@@ -21,12 +28,7 @@ app.post('/', (req, res) => {
     res.cookie("token", "my name is this");
 })
 
-const corsOption = {
-    origin: 'https://origin-frontend-two.vercel.app',
-    credientals:true
-}
 
-app.use(cors(corsOption));
 
 const PORT = process.env.PORT || 3000;
 
