@@ -13,6 +13,10 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 
+app.get('/this', (req, res) => {
+    res.send("my origin project");
+})
+
 app.post('/', (req, res) => {
     res.cookie("token", "my name is this");
 })
