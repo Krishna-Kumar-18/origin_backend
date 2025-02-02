@@ -17,7 +17,10 @@ app.post('/', (req, res) => {
     res.cookie("token", "my name is this");
 })
 
-const corsOption = {}
+const corsOption = {
+    origin: 'https://origin-frontend.onrender.com',
+    credientals:true
+}
 
 app.use(cors(corsOption));
 
