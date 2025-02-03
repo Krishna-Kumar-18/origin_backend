@@ -30,7 +30,7 @@ app.post('/', (req, res) => {
         {
             httpOnly:true,
             secure:true,
-            sameSite:"none",
+            sameSite:"lax",
             partitioned:true,
             path:'/',
             domain: '.origin-backend-h5rp.onrender.com',
