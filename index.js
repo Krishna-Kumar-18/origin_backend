@@ -33,7 +33,7 @@ app.post('/', (req, res) => {
             sameSite:"none",
             partitioned:true,
             path:'/',
-            domain: 'origin-backend-h5rp.onrender.com',
+            domain: '.origin-backend-h5rp.onrender.com',
         }
     ).json({
         message:'successfully',
