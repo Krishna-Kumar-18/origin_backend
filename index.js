@@ -31,7 +31,8 @@ app.post('/', (req, res) => {
             secure:true,
             sameSite:"none",
             partitioned:true,
-            path:'/'
+            path:'/',
+            domain: 'https://origin-backend-h5rp.onrender.com'
         }
     ).json({
         message:'successfully',
