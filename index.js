@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(cors(corsOption));
 
 app.post('/', (req, res) => {
-    res.cookie("__Host-token", "my name is this",
+    res.cookie("token", "my name is this",
         {
             httpOnly:true,
             secure:true,
