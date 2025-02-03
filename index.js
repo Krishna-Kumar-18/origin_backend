@@ -28,11 +28,12 @@ app.use(cors(corsOption));
 app.post('/', (req, res) => {
     res.cookie("__Host-token", "my name is this",
         {
+            httpOnly:true,
             secure:true,
             sameSite:"none",
             partitioned:true,
             path:'/',
-            domain: 'https://origin-backend-h5rp.onrender.com'
+            domain: 'https://origin-backend-h5rp.onrender.com',
         }
     ).json({
         message:'successfully',
