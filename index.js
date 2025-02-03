@@ -18,6 +18,8 @@ const corsOption = {
 
 }
 
+// https://origin-frontend-two.vercel.app/
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
@@ -27,7 +29,7 @@ app.post('/', (req, res) => {
     res.cookie("__Host-token", "my name is this",
         {
             secure:true,
-            sameSite:"strict",
+            sameSite:"none",
             partitioned:true,
             path:'/'
         }
