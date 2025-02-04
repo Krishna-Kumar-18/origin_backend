@@ -30,10 +30,10 @@ app.post('/', (req, res) => {
         {
             httpOnly:true,
             secure:true,
-            sameSite:"none",
+            sameSite:"None",
             partitioned:true,
-            path:'/',
-            domain: '.origin-backend-h5rp.onrender.com',
+            path:'/'
+            // domain: '.origin-backend-h5rp.onrender.com',
         }
     ).json({
         message:'successfully',
